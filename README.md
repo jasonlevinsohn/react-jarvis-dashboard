@@ -1,3 +1,15 @@
+### Initially we are folling eggheads: Building a Twelve-Factor Node.js App with Docker
+Steps
+======
+
+1. Create git repo
+2. Add Environment variables for Dark Sky Forecast and Google API
+
+## Libraries installed after initial create-react-app.
+* TODO: EsLint
+* TODO: Material UI 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
