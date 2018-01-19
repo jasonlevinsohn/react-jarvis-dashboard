@@ -4,11 +4,44 @@ Steps
 
 1. Create git repo
 2. Add Environment variables for Dark Sky Forecast and Google API
+3. Build docker setup
+4. Add Material UI and create custom l3 theme override file.
 
-## Libraries installed after initial create-react-app.
-* TODO: EsLint
-* TODO: Material UI 
+## TODO
+* Install EsLint - Done
+* Install Material UI - Done 
+* TODO: Build out Forecast App Bar
 
+
+## Docker 
+
+### Links
+Create React App Docker: https://www.peterbe.com/plog/how-to-create-react-app-with-docker
+
+### Commands
+To build new image
+`docker image build -t jlevz/create-react-jarvis-dashboard:simver-tag`
+
+To test the build, we can run it with:
+`docker container run -it -p 3000:3000 --name jarvis jlevz/create-react-jarvis-dashboard:simver-tag`
+
+To test with environment variables file:
+`docker container run -it -p 3000:3000 --name jarvis --env-file ./name-of-env-file jlevz/create-react-jarvis-dashboard:simver-tag`
+
+To stop the container:
+`docker stop jarvis`
+
+Push the image up to the repo
+`docker login`
+`docker tag jarvis-dashboard jlevz/create-react-jarvis-dashboard:simver-new-tag`
+`docker push jlevz/create-react-jarvis-dashboard:simver-new-tag`
+
+Pull down and run on server:
+`docker run jlevz/create-react-jarvis-dashboard:simver-new-tag`
+
+
+Create React App Docs
+======
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
